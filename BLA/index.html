@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dange Sports Turf Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>SAMEER DANGE SPORTS TURF</h1>
+  <p>Online Booking System</p>
+</header>
+
+<div class="container">
+
+  <!-- BOOKING FORM -->
+  <div class="card form-card">
+    <h2>Book Turf</h2>
+    <input type="text" id="playerName" placeholder="Name">
+    <input type="date" id="bookingDate">
+
+    <select id="timeSlot">
+      <option value="">Select Time Slot</option>
+      <option>12 PM - 01 PM</option>
+      <option>01 PM - 02 PM</option>
+      <option>02 PM - 03 PM</option>
+      <option>03 PM - 04 PM</option>
+      <option>04 PM - 05 PM</option>
+      <option>05 PM - 06 PM</option>
+      <option>06 PM - 07 PM</option>
+      <option>07 PM - 08 PM</option>
+      <option>08 PM - 09 PM</option>
+      <option>09 PM - 10 PM</option>
+      <option>10 PM - 11 PM</option>
+      <option>11 PM - 12 AM</option>
+      <option>12 AM - 01 AM</option>
+      <option>01 AM - 02 AM</option>
+      <option>02 AM - 03 AM</option>
+      <option>03 AM - 04 AM</option>
+      <option>04 AM - 05 AM</option>
+      <option>05 AM - 06 AM</option>
+      <option>06 AM - 07 AM</option>
+      <option>07 AM - 08 AM</option>
+      <option>08 AM - 09 AM</option>
+      <option>09 AM - 10 AM</option>
+      <option>10 AM - 11 AM</option>
+      <option>11 AM - 12 PM</option>
+    </select>
+
+    <select id="advanceAmount">
+    <option value="">Select Advance Payment</option>
+      <option value="100">₹100</option>
+      <option value="200">₹200</option>
+      <option value="300">₹300</option>
+      <option value="400">₹400</option>
+      <option value="500">₹500</option>
+      <p style="color:green; font-weight:bold;">Advance Payment Required</p>
+<p class="upi">
+  <b>UPI ID:</b> 
+  <span id="fixedUpi">Q225317273@ybl</span>
+</p>
+    </select>
+<button onclick="addBooking()">Book Now</button>
+  </div>
+
+  <!-- PAYMENT SECTION -->
+  <div class="card payment">
+    <h2>Payment Options</h2>
+    <p>Scan & Pay using any UPI App</p>
+    <img src="https://i.ibb.co/HpB9Pgqc/turf.jpg" alt="QR">
+    <p style="color:green; font-weight:bold;">(Advance Payment)</p>
+    <p class="upi"><b>UPI ID:</b> Q225317273@ybl</p>
+    <div class="contacts">
+      <p>📞 Sameer Dange: <b>+91 95520 09914</b></p>
+      <p>📞 Mojiz Quadri: <b>+91 70201 52518</b></p>
+    </div>
+    <p class="apps">Supports: PhonePe • Google Pay • BHIM • Any UPI App</p>
+  </div>
+
+  <!-- TODAY'S BOOKINGS -->
+  <div class="card">
+    <h2>Today's Bookings</h2>
+    <div id="todayList"></div>
+  </div>
+
+  <!-- ALL BOOKINGS -->
+  <div class="card">
+    <h2>All Bookings</h2>
+    <input type="date" id="filterDate" onchange="loadBookings()">
+    <div id="list"></div>
+  </div>
+
+</div>
+
+<!-- ADMIN LOGIN MODAL -->
+<div id="adminModal" class="modal">
+  <div class="modal-content">
+    <h2>Admin Login</h2>
+    <input id="adminUser" placeholder="Username">
+    <input id="adminPass" type="password" placeholder="Password">
+    <button onclick="checkAdmin()">Login</button>
+    <p id="adminStatus"></p>
+   
+  </div>
+</div>
+
+<footer>
+  Made by SHUJA
+</footer>
+
+<!-- Firebase SDKs -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  
+<!-- Your JS -->
+<script src="script.js"></script>
+</body>
+</html>

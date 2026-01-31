@@ -1,0 +1,54 @@
+/* Reset */
+* { box-sizing: border-box; margin:0; padding:0; font-family: Arial, sans-serif; }
+body { background: #f2f2f2; color: #333; line-height: 1.6; }
+
+/* Header */
+header { background: #5a2d82; color:#fff; text-align:center; padding:20px 10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+header h1 { font-size:1.8rem; margin-bottom:5px; }
+header p { font-size:1rem; color:#e0d4f7; }
+
+/* Container & Cards */
+.container { max-width:900px; margin:20px auto; padding:10px; display:flex; flex-direction:column; gap:20px; }
+.card { background:#fff; border-radius:12px; padding:20px; box-shadow:0 6px 12px rgba(0,0,0,0.08); }
+.card h2 { margin-bottom:15px; color:#5a2d82; }
+
+/* Inputs */
+input[type="text"], input[type="date"], input[type="password"], select {
+  width:100%; padding:12px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc; font-size:1rem;
+}
+
+/* Buttons */
+button { background:#5a2d82; color:#fff; border:none; padding:12px 20px; font-size:1rem; border-radius:8px; cursor:pointer; transition:0.2s; }
+button:hover { background:#421a5b; }
+
+/* Center Book Now button */
+.form-card button { display:block; margin: 0 auto; }
+
+/* Booking cards */
+.booking-item { background:#e8f0fe; border-radius:12px; padding:15px 20px; margin-bottom:12px; display:flex; flex-direction:column; gap:6px; position:relative; box-shadow:0 3px 6px rgba(0,0,0,0.08); transition:0.2s; }
+.booking-item:hover { transform:translateY(-2px); }
+.booking-item .name { font-weight:bold; font-size:1.05rem; color:#1a1a1a; }
+.booking-item .paid { font-weight:bold; color:#2e7d32; }
+.booking-item .cancel-btn { position:absolute; top:15px; right:15px; background:#e74c3c; color:#fff; border:none; padding:6px 12px; border-radius:6px; cursor:pointer; transition:0.2s; }
+.booking-item .cancel-btn:hover { background:#c0392b; }
+
+/* Payment card: center content & smaller QR */
+.payment { text-align: center; }
+.payment img { width: 200px; max-width: 80%; margin: 0 auto; display: block; }
+
+/* Admin modal */
+.modal { display:none; position:fixed; z-index:999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; }
+.modal-content { background:#fff; margin:auto; padding:25px 30px; border-radius:12px; max-width:400px; text-align:center; }
+.modal-content input { width:100%; height:40px; padding:8px 12px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc; font-size:1rem; }
+.modal-content button { width:100%; padding:12px; margin-bottom:10px; }
+
+/* Footer */
+footer { text-align:center; padding:15px; background:#5a2d82; color:#fff; margin-top:20px; border-top-left-radius:12px; border-top-right-radius:12px; font-size:0.95rem; }
+
+/* Responsive */
+@media(max-width:600px){
+  .card { padding:15px; }
+  header h1 { font-size:1.5rem; }
+  .booking-item .cancel-btn { top:10px; right:10px; padding:5px 10px; }
+  .payment img { width: 150px; }
+}
